@@ -5,6 +5,7 @@
  */
 
 #include "cradio.dtsi"
+#include <zephyr/dt-bindings/gpio/gpio.h>
 
 &kscan0 {
 		input-gpios
@@ -27,3 +28,9 @@
 		, <&pro_micro 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
 		;
 	};
+
+/ {
+	zephyr,user {
+			signal-gpios = <&pro_micro 1 GPIO_OUTPUT_HIGH>;
+	};
+};
