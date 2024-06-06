@@ -48,7 +48,7 @@
 		, <&pro_micro  9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
 		;
 		output-gpios
-		= <&pro_micro 1 GPIO_OUTPUT_LOW>
+		= <&pro_micro 1 (GPIO_OUTPUT_LOW)>
 		;
 	};
 
