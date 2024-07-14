@@ -41,12 +41,12 @@
             &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │ ' "      │
-           &ht LSHFT A &ht LALT S &ht LCTRL D &ht LGUI F &kp G      &kp H        &ht RGUI J &ht RCTRL K &ht RALT L &ht RSHFT SQT
+           &kp A      &ht LALT S &ht LCTRL D &ht LGUI F &kp G         &kp H      &ht RGUI J &ht RCTRL K &ht RALT L &kp SQT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ - _      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp MINUS
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &lt 2 TAB   &kp ENTER     &kp SPACE  &lt 1 BSPC
+                                            &to 1      &kp LSHIFT     &kp SPACE  &kp BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -54,8 +54,8 @@
         right_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ INSERT   │  1       │  2       │  3       │          │   │ HOME     │ PAGE DN  │ PAGE UP  │ END      │  *       │
-           &kp INS    &kp N1     &kp N2     &kp N3     &kp MINUS      &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp KP_MULTIPLY
+        //│ TAB      │  1       │  2       │  3       │          │   │ HOME     │ PAGE DN  │ PAGE UP  │ END      │  *       │
+           &kp TAB    &kp N1     &kp N2     &kp N3     &kp MINUS      &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp KP_MULTIPLY
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ DELETE   │  4       │  5       │  6       │          │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │  /       │
             &kp DEL    &kp N4     &kp N5     &kp N6     &kp PLUS      &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp KP_DIVIDE
@@ -63,7 +63,7 @@
         //│ CAPS     │  7       │  8       │  9       │  0       │   │          │          │          │          │          │
            &caps_word  &kp N7     &kp N8     &kp N9     &kp N0     &kp C_VOL_DN &kp C_VOL_UP  &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &kp ESC        &trans     &trans
+                                            &to 2      &kp ESC        &kp ENTER  &to 0
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -80,7 +80,7 @@
         //│    F6    │    F7    │    F8    │    F9    │    F10   │   │    F11   │    F12   │  ;       │  :       │   ?      │
             &kp F6    &kp F7     &kp F8     &kp F9     &kp F10        &kp F11    &kp F12  &kp SEMI   &kp COLON  &kp QMARK 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &trans
+                                             &to 3     &trans         &trans     &to 0
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -114,8 +114,8 @@
         //│   CTRL   │    A     │     S    │    D     │     F    │   │  N       │  M       │ , <      │ . >      │ / ?      │
            &kp LCTRL  &kp A      &kp S      &kp D      &kp  F         &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-        //                                 │    P     │   B      │   │          │          │
-                                            &mt ESC P  &mt LSHFT B    &tog 4     &lt 1 BSPC
+        //                                 │    P     │   SHIFT  │   │          │          │
+                                            &mt ESC P  &kp LSHFT      &tog 4     &lt 1 BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
