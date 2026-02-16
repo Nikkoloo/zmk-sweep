@@ -78,6 +78,16 @@
             key-positions = <21 22>;
             bindings = <&caps_word>;
         };
+        combo_nordic_o {
+            timeout-ms = <50>;
+            key-positions = <8 9>;
+            bindings = <&kp RA(P)>;
+        };
+        combo_nordic_a {
+            timeout-ms = <50>;
+            key-positions = <18 19>;
+            bindings = <&kp RA(Q)>;
+        };
     };
 
     conditional_layers {
@@ -93,11 +103,11 @@
         default_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O/Ö     │  P       │
-            &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &td1      &kp P
+        //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
+            &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ A/ä/lshft│  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │ ' "      │
-           &td_mt     HRML(S,         D,         F)       &kp G          &kp H      HRMR(J,      K,         L,        SQT)
+        //│ A        │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │ ' "      │
+           &kp A      HRML(S,         D,         F)       &kp G          &kp H      HRMR(J,      K,         L,        SQT)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ - _      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp MINUS
